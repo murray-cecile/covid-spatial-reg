@@ -1,0 +1,12 @@
+# data and shapefiles
+*.csv
+*.shp
+*.shx
+*.prj
+*.dbf
+*.cpg
+*.gz
+*.xml
+
+# geoda files
+*.gdal
