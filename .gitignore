@@ -10,3 +10,4 @@
 
 # geoda files
 *.gdal
+.Rproj.user
