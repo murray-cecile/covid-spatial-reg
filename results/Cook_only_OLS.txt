@@ -1,0 +1,114 @@
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :COOK_MASTER.csv
+Weights matrix      :File: Cook_ZCTA_knn4.gwt
+Dependent Variable  :confirmed_cases                Number of Observations:         184
+Mean dependent var  :    272.7663                Number of Variables   :           7
+S.D. dependent var  :    312.7018                Degrees of Freedom    :         177
+R-squared           :      0.5805
+Adjusted R-squared  :      0.5663
+Sum squared residual: 7505910.530                F-statistic           :     40.8283
+Sigma-square        :   42406.274                Prob(F-statistic)     :   5.628e-31
+S.E. of regression  :     205.928                Log likelihood        :   -1237.781
+Sigma-square ML     :   40792.992                Akaike info criterion :    2489.562
+S.E of regression ML:    201.9728                Schwarz criterion     :    2512.067
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    -387.8899637      92.9453089      -4.1733141       0.0000470
+        over60_share     831.0602914     307.6679991       2.7011593       0.0075814
+         pop_density      -0.0011912       0.0135753      -0.0877442       0.9301792
+     ptcommute_share    1165.7956253     164.5491985       7.0847846       0.0000000
+          race_Black     164.7373457      63.9273281       2.5769471       0.0107827
+           race_Hisp     941.9130472     151.8922165       6.2011936       0.0000000
+     uninsured_share    1434.5155745     598.4288509       2.3971364       0.0175647
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           16.211
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2         163.861           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test                6         342.435           0.0000
+Koenker-Bassett test              6         105.127           0.0000
+
+SPECIFICATION ROBUST TEST
+TEST                             DF        VALUE           PROB
+White                            27         124.652           0.0000
+
+DIAGNOSTICS FOR SPATIAL DEPENDENCE
+TEST                           MI/DF       VALUE           PROB
+Moran's I (error)              0.1106         2.429           0.0151
+Lagrange Multiplier (lag)         1           3.844           0.0499
+Robust LM (lag)                   1           0.208           0.6484
+Lagrange Multiplier (error)       1           5.132           0.0235
+Robust LM (error)                 1           1.496           0.2213
+Lagrange Multiplier (SARMA)       2           5.340           0.0693
+
+================================ END OF REPORT =====================================
+
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :COOK_MASTER.csv
+Weights matrix      :        None
+Dependent Variable  :confirmed_cases                Number of Observations:         184
+Mean dependent var  :    272.7663                Number of Variables   :           7
+S.D. dependent var  :    312.7018                Degrees of Freedom    :         177
+R-squared           :      0.5805
+Adjusted R-squared  :      0.5663
+Sum squared residual: 7505910.530                F-statistic           :     40.8283
+Sigma-square        :   42406.274                Prob(F-statistic)     :   5.628e-31
+S.E. of regression  :     205.928                Log likelihood        :   -1237.781
+Sigma-square ML     :   40792.992                Akaike info criterion :    2489.562
+S.E of regression ML:    201.9728                Schwarz criterion     :    2512.067
+
+White Standard Errors
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    -387.8899637      79.1805415      -4.8988041       0.0000022
+        over60_share     831.0602914     220.3382590       3.7717476       0.0002208
+         pop_density      -0.0011912       0.0064551      -0.1845293       0.8538095
+     ptcommute_share    1165.7956253     156.2963487       7.4588795       0.0000000
+          race_Black     164.7373457      56.2696907       2.9276391       0.0038643
+           race_Hisp     941.9130472     229.2022105       4.1095286       0.0000606
+     uninsured_share    1434.5155745     716.9624430       2.0008239       0.0469397
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           16.211
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2         163.861           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test                6         342.435           0.0000
+Koenker-Bassett test              6         105.127           0.0000
+
+SPECIFICATION ROBUST TEST
+TEST                             DF        VALUE           PROB
+White                            27         124.652           0.0000
+
+DIAGNOSTICS FOR SPATIAL DEPENDENCE
+TEST                           MI/DF       VALUE           PROB
+Moran's I (error)              0.1106         2.429           0.0151
+Lagrange Multiplier (lag)         1           3.844           0.0499
+Robust LM (lag)                   1           0.208           0.6484
+Lagrange Multiplier (error)       1           5.132           0.0235
+Robust LM (error)                 1           1.496           0.2213
+Lagrange Multiplier (SARMA)       2           5.340           0.0693
