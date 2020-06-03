@@ -49,7 +49,7 @@ il_pop <- il_collapsed %>%
   )
 
 # load and prep covid data
-covid <- read_csv("data/il-covid-counts-by-zipcode-5_7_2020.csv") %>% 
+covid <- read_csv("data/il-covid-counts-by-zipcode-5_19_2020.csv") %>% 
   clean_names() %>% 
   mutate(
     zip = as.character(zip)
@@ -65,7 +65,7 @@ covid <- read_csv("data/il-covid-counts-by-zipcode-5_7_2020.csv") %>%
 #===============================================================================#
 
 master <- covid %>% 
-  left_join(
+  right_join(
     il_zcta_area,
     by = c("zip" = "ZCTA5CE10")
   ) %>% 
@@ -88,6 +88,8 @@ master <- covid %>%
 #===============================================================================#
 # EXPORT
 #===============================================================================#
+
+# save(master, file = "data/MASTER_2020-06-03.Rdata")
 
 write_csv(master, "data/MASTER_DATASET.csv")
 

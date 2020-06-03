@@ -57,6 +57,7 @@ chi_sf <- il_cty_shp %>%
 zctas_shp <- zctas(cb = TRUE) %>%
   st_as_sf() 
 
+
 # check state file
 ggplot(il_st_shp) +
   geom_sf()
@@ -78,7 +79,8 @@ il_zcta <- st_intersection(zctas_shp, il_st_shp) %>%
   st_collection_extract()  
 
 # spatial join with cook county border
-cook_zcta <- st_intersection(cook_cty_sf, zctas_shp)
+cook_zcta <- st_intersection(cook_cty_sf, zctas_shp) %>% 
+  st_collection_extract()
 
 # spatial join with Chicago metro
 chi_zcta <- st_intersection(chi_sf, zctas_shp) 
@@ -96,8 +98,8 @@ il_zcta %>%
          driver = "ESRI Shapefile")
 
 # # save... hopefully
-# cook_zcta %>% 
-#   st_write( 
+# cook_zcta %>%
+#   st_write(
 #     dsn = "data/Cook_ZCTA_simple.shp",
 #     layer = "data/Cook_ZCTA_simple.shp",
 #     driver = "ESRI Shapefile")
